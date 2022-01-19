@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
@@ -13,24 +12,7 @@ const config = {
     measurementId: "G-44C2Y90BZP"
 }
 
-firebase.initializeApp(config);
-
-=======
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-
-const config = {
-  apiKey: 'AIzaSyCdHT-AYHXjF7wOrfAchX4PIm3cSj5tn14',
-  authDomain: 'crwn-db.firebaseapp.com',
-  databaseURL: 'https://crwn-db.firebaseio.com',
-  projectId: 'crwn-db',
-  storageBucket: 'crwn-db.appspot.com',
-  messagingSenderId: '850995411664',
-  appId: '1:850995411664:web:7ddc01d597846f65'
-};
-
-firebase.initializeApp(config);
+ firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
@@ -57,18 +39,12 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
->>>>>>> ba15a8ed208e1d1a9a684eead96e3782ac46759a
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-<<<<<<< HEAD
-
-provider.setCustomParameters({ prompt: "select account"});
-
-=======
 provider.setCustomParameters({ prompt: 'select_account' });
->>>>>>> ba15a8ed208e1d1a9a684eead96e3782ac46759a
+
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
