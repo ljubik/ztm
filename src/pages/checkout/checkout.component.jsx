@@ -12,6 +12,8 @@ import {
 
 import './checkout.styles.scss';
 
+const testCard = 4242424242424242;
+
 const CheckoutPage = ({ cartItems, total }) => (
   <div className='checkout-page'>
     <div className='checkout-header'>
@@ -36,11 +38,11 @@ const CheckoutPage = ({ cartItems, total }) => (
     ))}
     <div className='total'>TOTAL: ${total}</div>
     <div className='test-warning'>
-      *Please use the following test credit card for payments*
+      * Please use the following test credit card for payments *
       <br />
-      4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
+      4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
     </div>
-    <StripeCheckoutButton price={total} />
+    <StripeCheckoutButton price={total} testCard={testCard} />
   </div>
 );
 
