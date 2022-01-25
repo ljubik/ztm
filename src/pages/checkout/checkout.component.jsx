@@ -10,6 +10,7 @@ import {
   selectCartTotal
 } from '../../redux/cart/cart.selectors';
 
+import CurencyRate from '../../components/curency-component/curency-component';
 import './checkout.styles.scss';
 
 const testCard = 4242424242424242;
@@ -42,6 +43,7 @@ const CheckoutPage = ({ cartItems, total }) => (
       <br />
       4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
     </div>
+      <CurencyRate />
     <StripeCheckoutButton price={total} testCard={testCard} />
   </div>
 );
